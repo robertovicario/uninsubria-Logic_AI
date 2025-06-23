@@ -1,5 +1,12 @@
 #!/bin/bash
 
+run() {
+    printer "🚀 Running"
+    cd src
+    swipl
+    handler
+}
+
 setup() {
     printer "🔨 Setting up the repo"
     git submodule update --init --recursive
@@ -32,6 +39,9 @@ handler() {
 }
 
 case $1 in
+    run)
+        run $@
+        ;;
     setup)
         setup
         ;;
@@ -39,6 +49,6 @@ case $1 in
         articles $@
         ;;
     *)
-        echo "Usage: $0 {setup|articles}"
+        echo "Usage: $0 {setup|articles|run}"
         ;;
 esac

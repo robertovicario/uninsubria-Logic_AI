@@ -1,4 +1,28 @@
-# Project
+# Logic for Artificial Intelligence @ uninsubria
+
+## Instructions
+
+### `setup`
+
+If you haven't built the project yet, you can do so by running:
+
+```sh
+bash cmd.sh setup
+```
+
+### `run`
+
+```sh
+bash cmd.sh run
+```
+
+### `stop`
+
+To stop the program during the `swipl` execution, simply run:
+
+```pl
+halt.
+```
 
 ## License
 
